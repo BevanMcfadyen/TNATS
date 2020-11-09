@@ -2,6 +2,10 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
+.logo {
+  width: 90px;
+}
+
 .sponsor img {
   width: 100%;
   border: 2px solid lightgrey;
