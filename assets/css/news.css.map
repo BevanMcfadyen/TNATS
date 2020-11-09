@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "news.scss",
+        "vars.scss"
+    ],
+    "names": [],
+    "file": "news.css"
+}

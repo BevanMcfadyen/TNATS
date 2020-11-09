@@ -1,0 +1,533 @@
+@import 'vars';
+
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+.sponsor {
+    //background: grey;
+    img {
+        width: 100%;
+        border: 2px solid lightgrey;
+    }
+    p {
+        padding-top: 12px;
+        line-height: 1.4em;
+    }
+}
+
+.awards {
+    background: $clrTwo;
+    .other-awards-cont {
+        padding: 32px;
+        background: $clrOne;
+        color: white;
+    }
+}
+
+
+
+
+.award-grid {
+    background: $clrOne;
+    padding: 12px;
+    .single-award {
+        background: $clrTwo !important;
+        img {
+            width: 80px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 30px;
+        }
+        background: white;
+        padding: 32px;
+        p {
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// sightings page //
+.signting-outer {
+    padding: 32px;
+    padding-bottom: 22px;
+    background: lightgray;
+    table {
+        width: 100%;
+        
+        th {
+            border: 2px solid $clrOneDark !important;
+            background: $clrOne;
+            text-align: left;
+            color: $lightFont;
+        }
+        td {
+                color: $darkFont;
+        }
+        
+        td {
+            border: 2px solid $clrThr; //this one could change
+        }
+        
+        tr:nth-child(even) {
+            background: $clrTwo !important;
+        }
+
+        
+        .id {
+            color: $darkFont;
+            font-weight: bold;
+            width: 5%;
+            text-align: center;
+        }
+        .desc {
+            width: 40%;
+        }
+        .date {
+            width: 11%;
+        }
+        
+    }
+}
+
+.buttonMain {
+    background: $clrOne;
+    border: 2px solid $clrOneDark;
+    &:hover {
+        background: $clrOneDark;
+    }
+}
+
+.buttonSec {
+    background: $clrTwo;
+    border: 2px solid $clrOne;
+    color: $clrOneDark !important;
+    border-radius: 4px;
+    &:hover {
+        background: wheat;
+    }
+}
+
+//END SIGHTINGS PAGE// 
+
+//START GALLERY PAGE// 
+.imgGallery {
+    border: 2px solid grey;
+    margin-bottom: 16px;
+    box-shadow: 6px 6px 0px grey;
+}
+
+
+
+
+
+
+
+
+
+//general title / page heading
+.page-title {
+    background: $clrOne;
+    border: 2px solid $clrOneDark;
+    padding: 18px 28px;
+    h2 {
+        color: $lightFont;
+    }
+}
+
+.page-banner {
+    width: 100%;
+}
+
+.title-bar {
+    background: $clrOne;
+}
+.top-bar {
+    background: $clrOne;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    .dropdown {
+        background: none;
+        //background: orange;
+        padding-right: 100px;
+        @media(max-width: 860px) {
+            padding-right: 20px;
+        }
+        @media(max-width: 768px) {
+            padding-right: 0px;
+        }
+        li {
+            background: none;
+            a {
+                color: white;
+                &:after {
+                    color: red !important;
+                    //background: red !important;
+                }
+            }
+            &:hover {
+                background: $clrThr !important;
+                transition: 60ms linear all;
+                a {
+                    color: $darkFont;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+// FOOTER SECTION
+.footer-section {
+    background: $clrOneDark !important;
+    color: $lightFont !important;
+    h5 {
+        color: $lightFont;
+    }
+        ul li a {
+            color: $lightFont;
+            &:hover {
+                color: $clrThr;
+            }
+        }
+        .control2 ul {
+                padding: 0;
+                width: 90%;
+                li {
+                    padding-bottom: 8px;
+                }
+            }
+        
+}
+
+
+body {
+    background: $clrTwo;
+}
+
+
+
+
+
+
+
+
+
+
+
+//PUT ON NEWS SCSS //
+
+#news-outer {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background: $clrOne; 
+    padding: 8px;
+    aside {
+        background: $clrTwo;
+        padding: 12px;
+        
+        ul {
+            padding-top: 8px;
+            list-style: none;
+            li  {
+                padding-bottom: 4px;
+            }
+        }
+    }
+
+    article {
+        //background: skyblue;
+        padding: 32px;
+        .news-article {
+            margin-bottom: 12px;
+            padding: 12px;
+            background: $clrTwo;
+            border: 2px solid $clrTwoDark;
+            h3 {
+                text-align: left;
+            }
+        }
+        .img-article .img-article-inner {
+            display: grid;
+            grid-template-columns: 35% 65%;
+            margin-bottom: 12px;
+            img {
+                border: 2px solid grey;
+            }
+            .cont {
+                padding-left:22px;
+                padding-right:22px;
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    #news-outer {
+        grid-template-columns: 1fr;
+        article .img-article .img-article-inner {
+            grid-template-columns: 1fr;
+            img {
+                @include center;
+                width: 100%;
+               margin-bottom: 12px;
+               margin-top: 12px;
+            }
+            .cont {
+                padding: 6px;
+            }
+        } 
+    }
+}
+
+
+
+
+//HOME PAGE ADDITIVES//
+//CONSTRUCTED CONTAINER
+.outer-container {
+    //background: lightgray;
+    margin-bottom: 32px;
+    .sponsor-top-info {
+       padding: 12px;
+    }
+    .container-title {
+        background: $clrOne;
+        border: 3px solid $clrOneDark;
+        padding: 22px 8px;
+        h2 {
+            margin: 0;
+            color: white;
+        }
+    } //container-title
+    .container-grid {
+        background: white;
+        display: grid;
+        padding: 32px;
+        grid-gap: 32px;
+        .container-content {
+            background: $clrTwo;
+            padding: 8px;
+            min-height: 75px;
+            a {
+                color: #3e3d3d;
+                text-decoration: underline;
+                &:hover {
+                    color: blue;
+                }
+            }
+            p {
+                margin: 0;
+                color: #3e3d3d;
+                line-height: 1.1em;
+            }
+        }
+    }
+    .container-footer {
+        padding: 32px;
+        background: lightgray;
+        p {
+            margin: 0;
+            padding-bottom: 6px;
+        }
+    }
+}
+
+.sponsor-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.award-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    div {
+        
+        background: $clrTwo;
+        .container-content {
+            background: none !important;
+            p {
+                color: #3e3d3d !important;
+            }
+            
+        }
+        img {
+            @include center;
+            margin-bottom: 8px;
+            width: 35%;
+            
+        }
+    }
+    .container-grid-item {
+        border: 3px solid $clrTwoDark;
+    }
+}
+
+
+.home-post-grid {
+    //background: yellow !important;
+    grid-template-columns: 1fr 1fr;
+    div {
+        border: 2px solid $clrTwoDark !important;
+        background: $clrTwo!important;
+        padding: 32px 18px;
+        padding-bottom: 12px;
+        h3 {
+            padding-bottom: 12px;
+        }
+        img {
+            border: 2px solid $clrOneDark;
+            @include center;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .home-post-btn {
+            background: $clrOne;
+            border: 2px solid $clrOneDark;
+            color: white;
+            font-size: 1.2em;
+            &:hover {
+                background: $clrOneDark;
+               
+            }
+        }
+    }
+    .container-content {
+        background: none!important;
+        border: none!important;
+        p {
+            color: black !important;
+            font-size: 1.2em;
+            line-height: 1.4em !important;
+        }
+    }
+    
+}
+
+
+@media (max-width: 648px) {
+    .home-post-grid, .award-grid {
+        grid-template-columns: 1fr;
+    }
+    .sponsor-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+// SIGHTINGS //
+@media (max-width: 768px) {
+    .sightings-outer-grid {
+       background: yellow; 
+    }
+}
+
+
+.sightings-grid-mobile {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    table {
+        display: none;
+    }
+}
+
+
+
+
+@media(max-width: 768px) {
+    .sightings-grid-mobile {
+        display: block;
+        background: $clrTwo;
+        margin-bottom: 32px;
+        .sightings-grid-top {
+            background: $clrOne;
+            border: 2px solid $clrOneDark;
+            height: 30px;
+            width: 100%;
+        }
+        .stat {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            p {
+                font-size: 0.4em;
+                color: $darkFont;
+                margin: 0;
+            }
+            div {
+                border: 2px solid $clrThr;
+                border-top: 0px solid $clrThr;
+                border-left: 0;
+                padding: 8px;
+            }
+            .head {
+                border: 2px solid $clrOneDark;
+                border-top: 0px solid $clrOneDark;
+                border-right: 2px solid $clrOneDark !important;
+                background: $clrOne;
+                border-right: 0px;
+                text-align: center;
+                h5 {
+                    color: white;
+                }
+                
+            }
+        }
+    }
+}
+
+
+#sightings-grid-mobile-outer {
+    width: 100%;
+}
+
+
+
+
+// FOOTER SECTION
+.footer-section {
+    background: $clrOneDark !important;
+    color: $lightFont !important;
+    h5 {
+        color: $lightFont;
+    }
+        ul li a {
+            color: $lightFont;
+            &:hover {
+                color: $clrThr;
+            }
+        }
+        .control2 ul {
+                padding: 0;
+                width: 90%;
+                li {
+                    padding-bottom: 8px;
+                }
+            }
+        
+}
+
+
+
+//JACKS PART//
+//DONATIONS //
+
+
+//DONATIONS END//
