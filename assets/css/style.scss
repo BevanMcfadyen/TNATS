@@ -1,5 +1,18 @@
-@import 'vars';
 
+$clrOne: #5f8657;
+$clrOneDark: #3b5336;
+$clrTwo: #efefd5;
+$clrTwoDark: #e0e0ae;
+$clrThr: #9fa381;
+$darkFont: #1f1f1f;
+$lightFont: #eee;
+$darkFontLi: #3d3e3e;
+
+
+@mixin center {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
 
 h1, h2, h3, h4 {
     margin: 0;
